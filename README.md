@@ -213,7 +213,7 @@ Another option is to enable chat history. ***Note***: This is disabled by defaul
 python run_localGPT.py --use_history
 ```
 
-You can store user questions and model responses with flag `--save_qa` into a csv file `/local_chat_history/qa_log.csv`. Every interaction will be stored. 
+You can store user questions and model responses with flag `--save_qa` into a csv file `/local_chat_history/qa_log.csv`. Every interaction will be stored.
 
 ```shell
 python run_localGPT.py --save_qa
@@ -315,6 +315,7 @@ This is a test project to validate the feasibility of a fully local solution for
  - [Torch not compatible with CUDA enabled](https://github.com/pytorch/pytorch/issues/30664)
 
    -  Get CUDA version
+
       ```shell
       nvcc --version
       ```
