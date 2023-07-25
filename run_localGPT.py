@@ -2,7 +2,7 @@ import logging
 
 import click
 import torch
-#from auto_gptq import AutoGPTQForCausalLM
+from auto_gptq import AutoGPTQForCausalLM
 from huggingface_hub import hf_hub_download
 from langchain.chains import RetrievalQA
 from langchain.embeddings import HuggingFaceInstructEmbeddings
@@ -13,8 +13,8 @@ from langchain.prompts import PromptTemplate
 # from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.vectorstores import Chroma
 from transformers import (
-    #AutoModelForCausalLM,
-    #AutoTokenizer,
+    AutoModelForCausalLM,
+    AutoTokenizer,
     GenerationConfig,
     LlamaForCausalLM,
     LlamaTokenizer,
