@@ -36,6 +36,8 @@ If you want to use BLAS or Metal with [llama-cpp](<(https://github.com/abetlen/l
 ```shell
 # Example: cuBLAS
 CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install -r requirements.txt
+# If you have a previous installation of llama-cpp-python and the above still shows `BLAS = 0`:
+CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install --upgrade --force-reinstall llama-cpp-python --no-cache-dir
 ```
 
 ## Test dataset
