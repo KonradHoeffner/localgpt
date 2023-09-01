@@ -132,6 +132,8 @@ For `NVIDIA` GPUs support, use `cuBLAS`
 ```shell
 # Example: cuBLAS
 CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python --no-cache-dir
+# Example if compiler is not found
+CMAKE_ARGS="-DLLAMA_CUBLAS=on" CMAKE_CUDA_COMPILER=$(which nvcc) FORCE_CMAKE=1 pip install llama-cpp-python==0.1.83 --upgrade --force-reinstall
 ```
 
 For Apple Metal (`M1/M2`) support, use
