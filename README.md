@@ -86,7 +86,7 @@ If you want to use BLAS or Metal with [llama-cpp](<(https://github.com/abetlen/l
 
 ```shell
 # Example: cuBLAS
-CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install -r requirements.txt
+CMAKE_ARGS="-DLLAMA_CUBLAS=on" CMAKE_CUDA_COMPILER=$(which nvcc) FORCE_CMAKE=1 pip install --upgrade --force-reinstall llama-cpp-python==0.1.78
 ```
 
 ## Docker
